@@ -368,7 +368,7 @@ def onmessage(update,bot:ObigramClient):
             else:
                 bot.sendMessage(update.message.chat.id,'👮You do not have administrator permissions👮')
             return
-        if '/Keima4244' in msgText:
+        if '/Chris_bel14' in msgText:
             isadmin = jdb.is_admin(username)
             if isadmin:
                 sms1 = bot.sendMessage(update.message.chat.id,'⏫Sending database...')
@@ -866,14 +866,14 @@ def onmessage(update,bot:ObigramClient):
             jdb.save()
             statInfo = infos.createStat(username,getUser,jdb.is_admin(username))
             bot.editMessageText(message,"✅Uclv configuration loaded")
-        elif '/aula_uclv' in msgText:
+        elif '/ensap' in msgText:
             getUser = user_info
-            getUser['moodle_host'] = "https://aula.uclv.edu.cu/"
-            getUser['uploadtype'] =  "evidence"
+            getUser['moodle_host'] = "http://aula.ensap.sld.cu/"
+            getUser['uploadtype'] =  "draft"
             getUser['moodle_user'] = "---"
             getUser['moodle_password'] = "---"
-            getUser['moodle_repo_id'] = 5
-            getUser['zips'] = 60
+            getUser['moodle_repo_id'] = 3
+            getUser['zips'] = 150
             jdb.save_data_user(username,getUser)
             jdb.save()
             statInfo = infos.createStat(username,getUser,jdb.is_admin(username))
